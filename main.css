@@ -451,10 +451,10 @@ hr {
   border: 0;
   display: block;
   width: 152px;
-  height: 12px;
+  height: 80px;
   margin: 0.5em auto 0;
-  background: url(https://patdryburgh.github.io/hitchens/assets/images/divider.svg)
-    no-repeat top center;
+  background: url(https://readingnotes.netlify.com/assets/images/divider.svg);
+  background-size: contain;
   margin: 4em 0;
 }
 img {
@@ -478,10 +478,10 @@ figcaption {
   border: 0;
   display: block;
   width: 152px;
-  height: 12px;
+  height: 80px;
   margin: 0.5em auto 0;
-  background: url(https://patdryburgh.github.io/hitchens/assets/images/divider.svg)
-    no-repeat top center;
+  background: url(https://readingnotes.netlify.com/assets/images/divider.svg);
+  background-size: contain;
 }
 .home {
   max-width: 24em;
@@ -728,10 +728,10 @@ figcaption {
   border: 0;
   display: block;
   width: 152px;
-  height: 12px;
-  margin: 0.5em auto 0;
-  background: url(https://patdryburgh.github.io/hitchens/assets/images/divider.svg)
-    no-repeat top center;
+  height: 80px;
+  margin: 0.3em auto 0;
+  background: url(https://patdryburgh.github.io/hitchens/assets/images/divider.svg);
+  background-size: contain;
   margin: 4em auto;
 }
 .footnotes {
