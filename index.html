@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name='text:Disqus Shortname' content='' />
+    <meta name='text:Google Analytics' content='' />
+    <title>{block:PostTitle}{PostTitle} &mdash; {/block:PostTitle}{Title}</title>
+
+    {block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+    <link rel="stylesheet" href="https://static.tumblr.com/zsdt7pw/3CDqi1ybh/main.css">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="apple-touch-icon" href="{Favicon}">
+
+    {block:IfGoogleAnalytics}
+    <!-- Analytics -->
+    
+    <script type="text/javascript">
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '{text:Google Analytics}']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script>
+    
+    {/block:IfGoogleAnalytics}
+
+  </head>
+  <body>
+
+    <!-- CONTENT -->
+    <header class="site-masthead">
+      <nav class="site-navigation" role="navigation">
+        <ul>
+          <li>
+            <a href="/">
+              Home
+            </a>
+          </li>
+          {block:Pages}
+          <li>
+              <a href="{URL}">
+                {Label}
+              </a>
+          </li>
+          {/block:Pages}
+          {block:AskEnabled}
+          <li><a href="/ask">{AskLabel}</a></li>
+          {/block:AskEnabled}
+          {block:SubmissionsEnabled}
+          <li><a href="/submit">{SubmitLabel}</a></li>
+          {/block:SubmissionsEnabled}
+          <li><a href="/archive">Archive</a></li>
+        </ul>
+      </nav>
+      {block:IndexPage}
+        <h1>
+          {Title}
+        </h1>
+        {block:Description}
+        <h2>
+          {Description}
+        </h2>
+        {/block:Description}
+      {/block:IndexPage}
+    </header>
+
+    <!-- HOME PAGE -->
+    {block:IndexPage}
+    <main class="home" id="main" role="main" aria-label="Content"> 
+    <!-- page lists -->
+      <h1 class="content-title divided">
+        {block:PreviousPage}
+          Page {CurrentPage}
+        {/block:PreviousPage}
+        {block:SearchPage}
+          Search: {SearchQuery}
+        {/block:SearchPage}
+      </h1>
+        <ul class="post-list">
+          {block:Posts}
+          {block:Text}
+          <li>
+            <a href="{Permalink}" class="post-link">
+              <div class="post-link__heading">
+                {block:Title}
+                    <h1 class="post-link__title">      
+                      {Title}
+                    </h1>
+                {/block:Title}
+              </div>
+              {block:Date}
+              <span class="post-date">
+                {ShortMonth}. {DayOfMonth} {Year}
+              </span>
+              {/block:Date}
+            </a>
+          </li>
+          {/block:Text}
+          {block:Link}
+          <li>
+            <a href="{URL}" class="post-link">
+              <div class="post-link__heading">
+                    <h1 class="post-link__title">      
+                      {Name} 🔗
+                    </h1>
+                {block:Description}<span class="post-link__excerpt">{Description}</span>{/block:Description}
+              </div>
+              {block:Date}
+              <span class="post-date">
+                {ShortMonth}. {DayOfMonth} {Year}
+              </span>
+              {/block:Date}
+            </a>
+          </li>
+          {/block:Link}
+          {block:Chat}
+          <li>
+            <a href="{Permalink}" class="post-link">
+              <div class="post-link__heading">
+                {block:Title}
+                    <h1 class="post-link__title">      
+                      {Title} 💬
+                    </h1>
+                {/block:Title}
+              </div>
+              {block:Date}
+              <span class="post-date">
+                {ShortMonth}. {DayOfMonth} {Year}
+              </span>
+              {/block:Date}
+            </a>
+          </li>
+          {/block:Chat}
+          {block:Answer}
+          <li>
+            <a href="{Permalink}" class="post-link">
+              <div class="post-link__heading">   
+                      {Asker} asked: {Question}
+              </div>
+              {block:Date}
+              <span class="post-date">
+                {ShortMonth}. {DayOfMonth} {Year}
+              </span>
+              {/block:Date}
+            </a>
+          </li>
+          {/block:Answer}
+          {/block:Posts}
+        </ul>
+    
+        {block:Pagination}
+    
+          <div class="post-pagination">
+
+            <span>{block:NextPage}<a href="{NextPage}" class="pagination-next btn">&lang;{/block:NextPage}&nbsp;{block:NextPage}Older</a>{/block:NextPage}</span>
+            <span class="pagination-number">{CurrentPage} of {TotalPages}</span>
+            <span>{block:PreviousPage}<a href="{PreviousPage}" class="pagination-previous btn">Newer{/block:PreviousPage}&nbsp;{block:PreviousPage}&rang;</a>{/block:PreviousPage}</span>
+            
+          </div>
+        {/block:Pagination}
+    </main>
+    {/block:IndexPage}
+
+    <!-- Post Page -->
+
+    {block:PermalinkPage}
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" id="main" role="article" aria-label="Content">
+        <!-- Text -->
+        {block:Posts}
+        {block:Text}
+        {block:Title}
+          <h1 class="post-title divided p-name" itemprop="name headline">
+            {Title}
+          </h1>
+        {/block:Title}
+    
+        <div class="post-content e-content" itemprop="articleBody">
+          {Body}
+        </div>
+        {/block:Text}
+        
+        <!-- Link -->
+        
+        {block:Link}
+        {block:Title}
+        <h1 class="post-title divided p-name" itemprop="name headline">
+          {Title}
+        </h1>
+        {/block:Title}
+    
+        <div class="post-content e-content" itemprop="articleBody">
+          {block:Description}
+          {Description}
+          {/block:Description}
+        </div>
+        {/block:Link}
+
+        <!-- Chat -->
+
+        {block:Chat}
+        {block:Title}
+        <h1 class="post-title divided p-name" itemprop="name headline">
+          {Title}
+        </h1>
+        {/block:Title}
+    
+        <div class="post-content e-content" itemprop="articleBody">
+
+          {block:Lines}
+          {block:Label}
+          <p>
+              {Label}
+          </p>
+          {/block:Label}
+          <blockquote>
+            {Line}
+          </blockquote>
+          {block:Lines}
+        </div>
+        {/block:Chat}
+
+        <!-- ASK -->
+        {block:Answer}
+        {block:Title}
+        <h1 class="post-title divided p-name" itemprop="name headline">
+          {Title}
+        </h1>
+        {/block:Title}
+    
+        <div class="post-content e-content" itemprop="articleBody">
+          <p>{Asker} asked:</p>
+          <blockquote>{Question}</blockquote>
+          {Answer}
+        </div>
+        {/block:Answer}
+        {/block:Posts}
+      </div>
+      
+      <!-- Post Meta -->
+
+      {block:Posts}
+      {block:Text}
+      <div class="post-meta">
+        {block:HasTags}
+        <div itemprop="author">
+        {block:Tags}
+        &nbsp; <a href="{TagURL}">#{Tag}</a>
+        {/block:Tags}
+        </div>
+        {/block:HasTags}
+        
+        <time class="post-date dt-published" datetime="{Timestamp}" itemprop="datePublished">{ShortMonth}. {DayOfMonth} {Year}</time>
+      </div>
+      {/block:Text}
+      {block:Chat}
+      <div class="post-meta">
+        {block:HasTags}
+        <div itemprop="author">
+        {block:Tags}
+        &nbsp; <a href="{TagURL}">#{Tag}</a>
+        {/block:Tags}
+        </div>
+        {/block:HasTags}
+        
+        <time class="post-date dt-published" datetime="{Timestamp}" itemprop="datePublished">{ShortMonth}. {DayOfMonth} {Year}</time>
+      </div>
+      {/block:Chat}
+      {block:Link}
+      <div class="post-meta">
+        {block:HasTags}
+        <div itemprop="author">
+        {block:Tags}
+        &nbsp; <a href="{TagURL}">#{Tag}</a>
+        {/block:Tags}
+        </div>
+        {/block:HasTags}
+        
+        <time class="post-date dt-published" datetime="{Timestamp}" itemprop="datePublished">{ShortMonth}. {DayOfMonth} {Year}</time>
+      </div>
+      {/block:Link}
+      {block:Answer}
+      <div class="post-meta">
+        {block:HasTags}
+        <div itemprop="author">
+        {block:Tags}
+        &nbsp; <a href="{TagURL}">#{Tag}</a>
+        {/block:Tags}
+        </div>
+        {/block:HasTags}
+        
+        <time class="post-date dt-published" datetime="{Timestamp}" itemprop="datePublished">{ShortMonth}. {DayOfMonth} {Year}</time>
+      </div>
+      {/block:Answer}
+      {/block:Posts}
+
+    
+      {block:IfDisqusShortname}
+
+      <div id="disqus_thread"></div>
+      <script>
+        var disqus_config = function () {
+          this.page.url = '{Permalink}';
+          this.page.identifier = '{Permalink}';
+        };
+    
+        (function() {
+          var d = document, s = d.createElement('script');
+    
+          s.src = 'https://{text:Disqus Shortname}.disqus.com/embed.js';
+    
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      {/block:IfDisqusShortname}
+    
+    </article>
+    {/block:PermalinkPage}
+
+    <!-- END CONTENT -->
+
+    <form method="get" id="search" action="/search">
+      <input type="text" id="search__input" name="q" placeholder="Search&hellip;"/ autocomplete="off" value="{SearchQuery}">
+      <button type="submit" class="btn btn-bordered" tabindex="-1">Search</button>
+    </form>
+
+    <nav class="site-navigation" role="navigation">
+      <ul>
+        <li>
+          <a href="/">
+            Home
+          </a>
+        </li>
+        {block:Pages}
+        <li>
+            <a href="{URL}">
+              {Label}
+            </a>
+        </li>
+        {/block:Pages}
+        {block:AskEnabled}
+        <li><a href="/ask">{AskLabel}</a></li>
+        {/block:AskEnabled}
+        {block:SubmissionsEnabled}
+        <li><a href="/submit">{SubmitLabel}</a></li>
+        {/block:SubmissionsEnabled}
+        <li><a href="/archive">Archive</a></li>
+      </ul>
+    </nav>
+
+  </body>
+</html>
