@@ -217,17 +217,11 @@
         </h1>
         {/block:Title}
     
-        <div class="post-content e-content" itemprop="articleBody">
+        <div class="post-content e-content" itemprop="articleBody" id="chatbody">
 
           {block:Lines}
-          {block:Label}
-          <p>
-              {Label}
+          <p class="from-{block:Label}{Label}{/block:Label}">{Line}</p>
           </p>
-          {/block:Label}
-          <blockquote>
-            {Line}
-          </blockquote>
           {block:Lines}
         </div>
         {/block:Chat}
