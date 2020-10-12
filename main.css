@@ -782,7 +782,6 @@ figcaption {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 20px;
   font-weight: normal;
-  margin: 50px auto;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
