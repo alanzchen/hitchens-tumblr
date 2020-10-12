@@ -790,7 +790,11 @@ figcaption {
   flex-direction: column;
 }
 
-#chatbody p {
+#chatbody p:not([data-person]) {
+  text-align: center;
+}
+
+#chatbody p[data-person] {
   max-width: 255px;
   word-wrap: break-word;
   line-height: 24px;
@@ -800,8 +804,8 @@ figcaption {
   text-indent: 0pt !important;
 }
 
-#chatbody p:before,
-p:after {
+#chatbody p[data-person]:before,
+p[data-person]:after {
   content: "";
   position: absolute;
   bottom: -2px;
