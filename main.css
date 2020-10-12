@@ -802,6 +802,7 @@ figcaption {
   padding: 10px 20px;
   border-radius: 25px;
   text-indent: 0pt !important;
+  margin-bottom: 10px;
 }
 
 #chatbody p[data-person]:before,
