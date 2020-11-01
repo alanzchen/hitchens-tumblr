@@ -805,8 +805,8 @@ figcaption {
   margin-bottom: 10px;
 }
 
-#chatbody p[data-person]:before,
-p[data-person]:after {
+#chatbody .tail:before,
+.tail:after {
   content: "";
   position: absolute;
   bottom: -2px;
