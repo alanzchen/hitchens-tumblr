@@ -779,6 +779,7 @@ figcaption {
 /* iOS Chat */
 
 #chatbody {
+  text-indent: 0pt !important;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 20px;
   font-weight: normal;
@@ -801,7 +802,6 @@ figcaption {
   position: relative;
   padding: 10px 20px;
   border-radius: 25px;
-  text-indent: 0pt !important;
   margin: 7px;
 }
 
