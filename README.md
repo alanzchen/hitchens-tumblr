@@ -16,6 +16,6 @@ Open [index.html](https://github.com/alanzchen/hitchens-tumblr/blob/main/index.h
 
 # Using Chat post type
 
-To use the iMessage-like interface, start with `Me:` for a text bubble from you (blue), and `Them:` for a text bubble from others (grey). To insert a non-conversational text (such as indicating who are talking), simply type without starting with `{Name}:`. 
+To use the iMessage-like interface, start with `Me:` for a text bubble from you (blue), and `They:` for a text bubble from others (grey). To insert a non-conversational text (such as indicating who are talking), simply type without starting with `{Name}:`. 
 
 [Demo](https://blog.zenan.ch/post/631375887869394944/梦-or-梦魇)
