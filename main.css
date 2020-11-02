@@ -779,7 +779,6 @@ figcaption {
 /* iOS Chat */
 
 #chatbody {
-  text-indent: 0pt !important;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 20px;
   font-weight: normal;
@@ -788,6 +787,10 @@ figcaption {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-direction: column;
+}
+
+p .bubble {
+  text-indent: 0pt !important;
 }
 
 #chatbody p:not([data-person]) {
