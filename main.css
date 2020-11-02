@@ -789,7 +789,7 @@ figcaption {
   flex-direction: column;
 }
 
-p .bubble {
+p.bubble {
   text-indent: 0pt !important;
 }
 
