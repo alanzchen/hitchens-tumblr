@@ -789,9 +789,13 @@ figcaption {
   flex-direction: column;
 }
 
+p.bubble {
+  text-indent: 0pt !important;
+}
+
 #chatbody p:not([data-person]) {
   text-align: center;
-  padding: 10px 20px;
+  padding: 2em 0em;
 }
 
 #chatbody p[data-person] {
@@ -801,26 +805,25 @@ figcaption {
   position: relative;
   padding: 10px 20px;
   border-radius: 25px;
-  text-indent: 0pt !important;
-  margin-bottom: 10px;
+  margin: 7px;
 }
 
-#chatbody p[data-person]:before,
-p[data-person]:after {
+#chatbody .tail:before,
+.tail:after {
   content: "";
   position: absolute;
   bottom: -2px;
   height: 20px;
 }
 
-p.bubble[data-person="Them:" i] {
+p.bubble[data-person="They:" i] {
   background: #e5e5ea;
   color: black;
   text-align: unset;
   align-self: flex-start;
 }
 
-p.bubble[data-person="Them:" i]:before {
+p.bubble[data-person="They:" i]:before {
   left: -7px;
   border-left: 20px solid #e5e5ea;
   border-bottom-right-radius: 16px 14px;
@@ -828,7 +831,7 @@ p.bubble[data-person="Them:" i]:before {
   transform: translate(0, -2px);
 }
 
-p.bubble[data-person="Them:" i]:after {
+p.bubble[data-person="They:" i]:after {
   left: 4px;
   width: 26px;
   background: white;
