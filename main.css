@@ -382,7 +382,7 @@ body {
   background: #fede00;
   color: #0b0404;
   font-family: "EB Garamond", Garamond, "Times New Roman", "SongTi SC", "STSong", "SimSun", serif;  font-size: 1.3125em;
-  line-height: 1.5;
+  line-height: 2;
 }
 h1 {
   font-size: 3em;
@@ -673,7 +673,7 @@ figcaption {
 }
 .post p {
   text-align: justify;
-  text-indent: 1.5em;
+  text-indent: 2em;
   text-justify: inter-word;
 }
 .post p:first-of-type,
