@@ -676,9 +676,6 @@ figcaption {
   text-indent: 2em;
   text-justify: inter-word;
 }
-.post h2 + p {
-  text-indent: 0;
-}
 .post a:hover {
   background: #fff5b2;
 }
